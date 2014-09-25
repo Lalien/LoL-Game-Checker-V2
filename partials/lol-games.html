@@ -1,0 +1,28 @@
+<a href='#/'>Start a new search </a>
+<h1>
+	Recent Games
+</h1>
+<table class='table table-hover'>
+	<thead>
+		<tr>
+			<td> Game Type </td>
+			<td> </td>
+			<td> Champion </td>
+			<td> Kills </td>
+			<td> Deaths </td>
+			<td> Assists </td>
+
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat='(key, val) in games'>
+			<td>{{ val.subType }} </td>
+			<td><img src="{{imageBase + champion[key] + imageType}}"></td>
+			<td>{{champion[key]}}</td>
+			<td>{{ val.stats.championsKilled || 0 }}</td>
+			<td>{{ val.stats.numDeaths || 0 }} </td>
+			<td>{{ val.stats.assists || 0 }}</li>
+			<td><a href="#/{{val.gameId}}/{{summoner_id}}"> More Information </a></td>
+		</tr>
+	</tbody>
+</table>

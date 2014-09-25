@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app="phonecatApp">
+<head>
+  <meta charset="utf-8">
+  <title>League of Legends Game and Stat Checker V2</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel='stylesheet' href='css/miles.css'>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src='js/charactergrab.js'></script>
+  <style>
+    .team1 {
+      background-color: green;
+    }
+
+    .team2 {
+      background-color: red;
+    }
+
+    #summoner-games {
+      display: none;
+    }
+
+    #game-details {
+      display: none;
+    }
+  </style>
+  <script>
+    
+  </script>
+</head>
+<body>
+  <div ng-view class='container'></div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+/*  */
+.container {
+	margin: 0 auto;
+	width: 70%;
+}
+
+.inline {
+	display: inline-block;
+}
+
+/* Sectioning */
+.lone-wolf {
+	clear:both;
+}
+.wrapper {
+	width: 100%;
+}
+.duo-mod {
+	width: 45%;
+}
+
+.duo-mod-w-space {
+	width: 40%;
+	margin-left: 6%;
+}
+
+.duo-mod-w-space:first {
+	margin-right: 4%;
+}
+
+.tri-mod {
+	width: 33%;
+	vertical-align: top;
+	position: relative;
+}
+
+.tri-mod-w-space {
+	width: 30%;
+	margin-left: 2%;
+	vertical-align: top;
+	position: relative;
+}
+
+.sm-fixed-bar {
+	position: fixed;
+	height: 3em;
+	width: 100%;
+	top: 0em;
+	z-index: 100;
+}
+.sm-bar-make-way {
+	padding-top: 2.86em;
+}
+
+.sm-fixed-bar > .container {
+	margin-top: 0.70em;
+}
+
+/* Positioning */
+
+.center {
+	margin: 0 auto;
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+.align-top {
+	vertical-align: top;
+}
+
+.bottom-stick {
+	position: absolute;
+	bottom: 0.5em;
+	left: 0em;
+	right: 0em;
+}
+
+.top-stick {
+	position: absolute;
+	top:0em;
+	left:0em;
+	right:0em;
+}
+
+.center-stick {
+	position: absolute;
+}
+
+hr.dashed-line {
+	border: 0;
+	border-bottom: 1px dashed #CCC;
+	background: #999;
+}
+
+.stretch-base {
+	position: absolute;
+	left: 0em;
+	right: 0em;
+}
+
+/* ENHANCEMENT CLASSES */
+
+.billboard {
+	width: 100%;
+	clear:both;
+	margin-bottom: 2em;
+	padding: 1em 0em 1em 0em;
+}
+
+.landing-container {
+	position:fixed;
+	width: 100%;
+}
+/* Size */
+.long-container {
+	min-height: 27em;
+}
+
+.icon {
+	height: 1em;
+	width: 1em;
+}
+/* Links */
+
+.discreet-link {
+	color: blue;
+	text-decoration: none;
+}
+/* Background */
+.background-black {
+	background-color: black;
+}
+
+.background-blue {
+	background-color: blue;
+}
+
+/* Text */
+.center-text {
+	text-align: center;
+}
+
+.justify {
+	text-align: justify;
+}
+
+.white-txt {
+	color: white;
+}
+
+/* FONTS */
+.lucida {
+	font-family: "Lucida Sans Unicode";
+}
+/* BUTTONS */ 
+.black-btn {
+
+}
+/* IMAGES */
+.headline-image {
+	clear:both;
+	margin:0 auto;
+	display: block;	
+	margin-bottom: 2em;
+}
+
+.md-square-image {
+	height: 10em;
+	width: 10em;
+}
+
+.circular {
+	border-radius: 50%;
+}
+
+/* Lists */
+.simple-list {
+	list-style: none;
+	list-style-type: none;
+	padding-left: 0em;
+}

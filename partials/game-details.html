@@ -1,0 +1,25 @@
+<a href='#/summoner/{{summoner_id}}'> Back </a>
+<table class='table table-hover'>
+	<thead>
+		<tr>
+			<td> </td>
+			<td> Level </td>
+			<td>  </td>
+			<td> Kills </td>
+			<td> Deaths </td>
+			<td> Assists </td>
+			<td> Creep Score </td>
+		<tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat='(key, value) in players' class='{{team[key]}}'>
+			<td><img src="{{imageBase + champion[key] + imageType}}"></td>
+			<td>{{value.stats.champLevel}}</td>
+			<td> {{champion[key]}}</td>
+			<td> {{value.stats.kills}} </td>
+			<td> {{value.stats.deaths}} </td>
+			<td> {{value.stats.assists}} </td>
+			<td> {{value.stats.minionsKilled}}</td>
+		</tr>
+	</tbody>
+</table>
