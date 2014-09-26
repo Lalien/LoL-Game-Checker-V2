@@ -13,7 +13,7 @@
 	</thead>
 	<tbody>
 		<tr ng-repeat='(key, value) in players' class='{{team[key]}}'>
-			<td><img src="{{imageBase + champion[key] + imageType}}"></td>
+			<td><img src="{{imageBase + champion[key] + imageType}}" class='icon'></td>
 			<td>{{value.stats.champLevel}}</td>
 			<td> {{champion[key]}}</td>
 			<td> {{value.stats.kills}} </td>

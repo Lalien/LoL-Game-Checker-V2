@@ -11,13 +11,12 @@
 			<td> Kills </td>
 			<td> Deaths </td>
 			<td> Assists </td>
-
 		</tr>
 	</thead>
 	<tbody>
 		<tr ng-repeat='(key, val) in games'>
 			<td>{{ val.subType }} </td>
-			<td><img src="{{imageBase + champion[key] + imageType}}"></td>
+			<td><img src="{{imageBase + champion[key] + imageType}}" class='icon'></td>
 			<td>{{champion[key]}}</td>
 			<td>{{ val.stats.championsKilled || 0 }}</td>
 			<td>{{ val.stats.numDeaths || 0 }} </td>

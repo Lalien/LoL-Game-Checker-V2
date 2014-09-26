@@ -16,37 +16,12 @@
 	<tbody>
 		<tr ng-repeat='(key, val) in games'>
 			<td>{{ val.subType }} </td>
-			<td><img src="{{imageBase + champion[key] + imageType}}"></td>
+			<td><img src="{{imageBase + champion[key] + imageType}}" class='icon'></td>
 			<td>{{champion[key]}}</td>
 			<td>{{ val.stats.championsKilled || 0 }}</td>
 			<td>{{ val.stats.numDeaths || 0 }} </td>
 			<td>{{ val.stats.assists || 0 }}</li>
 			<td><a href='#/{{val.gameId}}/{{summoner_id}}'>Game Details</a></td>
-		</tr>
-	</tbody>
-</table>
-
-<table class='table table-hover' id='game-details'>
-	<thead>
-		<tr>
-			<td> </td>
-			<td> Level </td>
-			<td>  </td>
-			<td> Kills </td>
-			<td> Deaths </td>
-			<td> Assists </td>
-			<td> Creep Score </td>
-		<tr>
-	</thead>
-	<tbody>
-		<tr ng-repeat='(key, value) in players' class='{{team[key]}}'>
-			<td><img src="{{imageBase + champion[key] + imageType}}"></td>
-			<td>{{value.stats.champLevel}}</td>
-			<td> {{champion_details[key]}}</td>
-			<td> {{value.stats.kills}} </td>
-			<td> {{value.stats.deaths}} </td>
-			<td> {{value.stats.assists}} </td>
-			<td> {{value.stats.minionsKilled}}</td>
 		</tr>
 	</tbody>
 </table>

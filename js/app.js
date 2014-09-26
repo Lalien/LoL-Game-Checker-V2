@@ -2,9 +2,9 @@
 
 /* App Module */
 
-var phonecatApp = angular.module('phonecatApp', [
+var phonecatApp = angular.module('lolApp', [
   'ngRoute',
-  'lolCtrls'
+  'lolCtrls', 'lolServices'
 ]);
 
 phonecatApp.config(['$routeProvider',
