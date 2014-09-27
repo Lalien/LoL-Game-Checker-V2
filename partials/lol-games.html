@@ -15,9 +15,9 @@
 	</thead>
 	<tbody>
 		<tr ng-repeat='(key, val) in games'>
-			<td>{{ val.subType }} </td>
-			<td><img src="{{imageBase + champion[key] + imageType}}" class='icon'></td>
-			<td>{{champion[key]}}</td>
+			<td>{{ val.subType | gameType:val.subType }} </td>
+			<td><img src="img/champions/{{champion[key].championId|championName:champion[key].championId}}.png" class='icon'></td>
+			<td>{{champion[key].championId|championName:champion[key].championId}}</td>
 			<td>{{ val.stats.championsKilled || 0 }}</td>
 			<td>{{ val.stats.numDeaths || 0 }} </td>
 			<td>{{ val.stats.assists || 0 }}</li>

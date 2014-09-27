@@ -4,7 +4,7 @@
 
 var phonecatApp = angular.module('lolApp', [
   'ngRoute',
-  'lolCtrls', 'lolServices'
+  'lolCtrls', 'lolServices', 'lolDirectives', 'lolFilters'
 ]);
 
 phonecatApp.config(['$routeProvider',

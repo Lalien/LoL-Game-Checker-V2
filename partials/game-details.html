@@ -12,10 +12,10 @@
 		<tr>
 	</thead>
 	<tbody>
-		<tr ng-repeat='(key, value) in players' class='{{team[key]}}'>
-			<td><img src="{{imageBase + champion[key] + imageType}}" class='icon'></td>
+		<tr ng-repeat='(key, value) in players' class='{{champion[key].teamId|championTeam:champion[key].teamId}}'>
+			<td><img src="img/champions/{{champion[key].championId|championName:champion[key].championId}}.png" class='icon'></td>
 			<td>{{value.stats.champLevel}}</td>
-			<td> {{champion[key]}}</td>
+			<td> {{champion[key].championId|championName:champion[key].championId}}</td>
 			<td> {{value.stats.kills}} </td>
 			<td> {{value.stats.deaths}} </td>
 			<td> {{value.stats.assists}} </td>

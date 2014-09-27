@@ -242,3 +242,10 @@ function fetchChampion(id) {
 		break;
 	}
 }
+
+function firstMember (obj) {
+  for(var i in obj) 
+      if (obj.hasOwnProperty(i)){ // exclude properties from the prototype
+          return obj[i];
+      }
+}
