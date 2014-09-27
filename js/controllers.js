@@ -5,7 +5,6 @@ lolControllers.controller('GameHome', ['$scope', '$http', 'Summoner', 'Game', fu
     var query = name.name;
     Summoner.query({summonerName: query}, function(summoner) {
       Game.query({summonerId: firstMember(summoner).id}, function(games) {
-        var champion_names = [];
         $('#summoner-games').show().fadeIn();
         $scope.champion = games.games.slice(0,10);
         $scope.summoner_id = games.summonerId;
