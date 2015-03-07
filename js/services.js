@@ -12,7 +12,7 @@ lolServices.factory('Summoner', ['$resource', function($resource) {
 
 lolServices.factory('Game', ['$resource', function($resource) {
 	return $resource('https://na.api.pvp.net/api/lol/na/v1.3/game/by-summoner/:summonerId/recent?api_key=7ea34bd9-1733-4cb5-91dc-fdaddd734139', {}, {
-		query: {method: 'GET', params:{summonerId: 'summonerId'}, isArray: false}
+			query: {method: 'GET', params:{summonerId: 'summonerId'}, isArray: false}
 	});
 }]);
 
@@ -21,3 +21,4 @@ lolServices.factory('Details', ['$resource', function($resource) {
 		query: {method: 'GET', params:{matchId: 'matchId'}, isArray: false}
 	});
 }]);
+

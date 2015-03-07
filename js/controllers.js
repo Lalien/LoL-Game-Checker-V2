@@ -15,15 +15,21 @@ lolControllers.controller('GameHome', ['$scope', '$http', 'Summoner', 'Game', fu
 }]);
 
 lolControllers.controller('GameDetailCtrl', ['$scope', '$http', '$routeParams', 'Details', function($scope, $http, $routeParams, Details) {
-  Details.query({matchId: $routeParams.gameId}, function(game) {
+  Details.query({matchId: $routeParams.gameId}, function success(game) {
     $scope.summoner_id = $routeParams.summonerId;
     $scope.champion = game.participants.slice(0,10);
     $scope.players = game.participants;
+  },
+  function err(error) {
+    console.log(error);
+    if (error.status == 0) {
+      $scope.summoner_id = $routeParams.summonerId;
+      $scope.error =  "The League of Legends API is currently down. Please try again later.";
+    } else if (firstMember(error).status_code == 503) {
+      $scope.summoner_id = $routeParams.summonerId;
+      $scope.error = "This is some bullshit, man.";
+    }
   });
-
-  $scope.comparePlayers = function(player1, player2) {
-    $scope.player1 = player1;
-  }
 }]);
 
 lolControllers.controller('GameCollector', ['$scope', '$http', '$routeParams', 'Game',  function($scope, $http, $routeParams, Game) {

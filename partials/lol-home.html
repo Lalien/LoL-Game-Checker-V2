@@ -1,20 +1,28 @@
-<form novalidate>
+<style>
+	.win {
+		background-color: #BEF781;;
+	}
+
+	.loss {
+		background-color: #F7819F;
+	}
+</style><form novalidate>
 	<input type='text' ng-model='summoner.name'>
 	<button ng-click='findSummoner(summoner)'> Find Summoner! </button>
 </form>
-<table class='table table-hover' id='summoner-games'>
+<table class='table table-hover' id='summoner-games' >
 	<thead>
 		<tr>
 			<td> Game Type </td>
 			<td> </td>
-			<td> Champion </td>
+			<td> <a href="" ng-click="predicate = 'val.stats.championsKilled'; reverse=false">Champion </a> </td>
 			<td> Kills </td>
 			<td> Deaths </td>
 			<td> Assists </td>
 		</tr>
 	</thead>
 	<tbody>
-		<tr ng-repeat='(key, val) in games'>
+		<tr ng-repeat='(key, val) in games | orderBy:predicate:reverse' class='{{val.stats.win | winFilter:val.stats.win}}'>
 			<td>{{ val.subType | gameType:val.subType }} </td>
 			<td><img src="img/champions/{{champion[key].championId|championName:champion[key].championId}}.png" class='icon'></td>
 			<td>{{champion[key].championId|championName:champion[key].championId}}</td>
