@@ -15,12 +15,12 @@
 	</thead>
 	<tbody>
 		<tr ng-repeat='(key, val) in games'>
-			<td>{{ val.subType | gameType:val.subType }} </td>
+			<td ng-bind="val.subType | gameType:val.subType"></td>
 			<td><img src="img/champions/{{champion[key].championId|championName:champion[key].championId}}.png" class='icon'></td>
-			<td>{{champion[key].championId|championName:champion[key].championId}}</td>
-			<td>{{ val.stats.championsKilled || 0 }}</td>
-			<td>{{ val.stats.numDeaths || 0 }} </td>
-			<td>{{ val.stats.assists || 0 }}</li>
+			<td ng-bind="champion[key].championId|championName:champion[key].championId"></td>
+			<td ng-bind="val.stats.championsKilled || 0"></td>
+			<td ng-bind="val.stats.numDeaths || 0"></td>
+			<td ng-bind="val.stats.assists || 0"></li>
 			<td><a href="#/{{val.gameId}}/{{summoner_id}}"> More Information </a></td>
 		</tr>
 	</tbody>

@@ -5,7 +5,7 @@
 		<tr>
 			<td> </td>
 			<td> Level </td>
-			<td>  </td>
+			<td> Champion</td>
 			<td> Kills </td>
 			<td> Deaths </td>
 			<td> Assists </td>
@@ -15,12 +15,12 @@
 	<tbody>
 		<tr ng-repeat='(key, value) in players' class='{{champion[key].teamId|championTeam:champion[key].teamId}}'>
 			<td><img src="img/champions/{{champion[key].championId|championName:champion[key].championId}}.png" class='icon'></td>
-			<td>{{value.stats.champLevel}}</td>
-			<td> {{champion[key].championId|championName:champion[key].championId}}</td>
-			<td> {{value.stats.kills}} </td>
-			<td> {{value.stats.deaths}} </td>
-			<td> {{value.stats.assists}} </td>
-			<td> {{value.stats.minionsKilled}}</td>
+			<td ng-bind="value.stats.champLevel"></td>
+			<td ng-bind="champion[key].championId|championName:champion[key].championId"></td>
+			<td ng-bind="value.stats.kills"></td>
+			<td ng-bind="value.stats.deaths"></td>
+			<td ng-bind="value.stats.assists"></td>
+			<td ng-bind="value.stats.minionsKilled"></td>
 		</tr>
 	</tbody>
 </table>

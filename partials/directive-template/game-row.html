@@ -1,0 +1,7 @@
+<td>{{ val.subType | gameType:val.subType }} </td>
+<td><img src="img/champions/{{champion[key].championId|championName:champion[key].championId}}.png" class='icon'></td>
+<td>{{champion[key].championId|championName:champion[key].championId}}</td>
+<td>{{ val.stats.championsKilled || 0 }}</td>
+<td>{{ val.stats.numDeaths || 0 }} </td>
+<td>{{ val.stats.assists || 0 }}</li>
+<td><a href="#/{{val.gameId}}/{{summoner_id}}"> More Information </a></td>
