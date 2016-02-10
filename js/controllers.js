@@ -10,6 +10,15 @@ lolControllers.controller('GameHome', ['$scope', '$http', 'Summoner', 'Game', fu
         $scope.summoner_id = games.summonerId;
         $scope.games = games.games;
       });
+    },
+    function err(error) {
+      if (error.status == 0) {
+        $scope.summoner_id = $routeParams.summonerId;
+        $scope.error =  "The League of Legends API is currently down. Please try again later.";
+      } else if (firstMember(error).status_code == 503) {
+        $scope.summoner_id = $routeParams.summonerId;
+        $scope.error = "An error occured!";
+      } 
     });
   };
 }]);
@@ -27,7 +36,7 @@ lolControllers.controller('GameDetailCtrl', ['$scope', '$http', '$routeParams', 
       $scope.error =  "The League of Legends API is currently down. Please try again later.";
     } else if (firstMember(error).status_code == 503) {
       $scope.summoner_id = $routeParams.summonerId;
-      $scope.error = "This is some bullshit, man.";
+      $scope.error = "An error occured!";
     }
   });
 }]);
